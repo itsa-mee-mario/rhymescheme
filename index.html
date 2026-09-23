@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>swiftadrift</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="hud-left">
+    <p class="theme-line">
+      <span class="theme-name" id="theme-name">—</span>
+      <span class="theme-blurb" id="theme-blurb"></span>
+      <span class="scheme" id="form-scheme"></span>
+    </p>
+    <p class="progress" id="progress"></p>
+  </div>
+  <div class="hud-right">
+    <div class="stat">
+      <span class="stat-label">ink</span>
+      <span class="stat-value ink" id="ink-total">0</span>
+    </div>
+    <label class="toggle" title="Score line endings against a rhyme scheme">
+      <input type="checkbox" id="rhyme-toggle" checked>
+      <span>rhyme</span>
+    </label>
+    <input class="seed-input" id="seed-input" spellcheck="false" autocomplete="off"
+           aria-label="map seed">
+    <button class="btn" id="how">how</button>
+    <button class="btn" id="atlas">map</button>
+    <button class="btn" id="archive">poems</button>
+    <button class="btn" id="new-map">new map</button>
+  </div>
+</header>
+
+<main>
+  <section class="poem-pane">
+    <div class="poem" id="poem"></div>
+    <p class="hint">
+      Click a word on the belt to drop it into the highlighted line. Glue is
+      free. Bonus words are one-use. Click anything you placed to take it out.
+    </p>
+  </section>
+
+  <aside class="bonus-rail">
+    <div class="bonus-head">
+      <span class="bonus-title">bonus</span>
+      <span class="bonus-note">one use each</span>
+    </div>
+    <div class="bonus-tray" id="bonus-tray"></div>
+  </aside>
+</main>
+
+<section class="glue-area">
+  <div class="glue-head">
+    <span class="glue-title">glue</span>
+    <span class="glue-count" id="glue-count"></span>
+  </div>
+  <div class="glue-tray" id="glue-tray"></div>
+</section>
+
+<section class="belt-area">
+  <div class="belt-meta">
+    <span id="belt-supply">—</span>
+    <button class="dredge" id="dredge" hidden></button>
+    <span id="belt-vibes">—</span>
+  </div>
+  <div class="foresight" id="foresight" hidden></div>
+  <div class="belt-rail" id="belt-rail">
+    <div class="belt" id="belt"></div>
+    <div class="belt-edge"></div>
+  </div>
+</section>
+
+<div class="held" id="held" hidden></div>
+
+<div class="banner" id="banner" hidden></div>
+<div class="archive" id="archive-panel" hidden></div>
+<div class="draft" id="draft" hidden></div>
+<div class="share" id="share-panel" hidden></div>
+<div class="atlas" id="atlas-panel" hidden></div>
+<div class="wildcard" id="wildcard" hidden></div>
+<div class="tutorial" id="tutorial" hidden></div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
